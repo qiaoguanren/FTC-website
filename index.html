@@ -21,6 +21,7 @@
         gap: 10px;
         max-width: 1000px;
         margin: 0 auto;
+        height: auto;
     }
     .gif-grid_3columns {
         display: grid;
@@ -28,19 +29,13 @@
         gap: 10px;
         max-width: 1000px;
         margin: 0 auto;
+        height: auto;
     }
     .gif-grid img {
         width: 100%;
         height: auto;
     }
-    .grid-item {
-        display: grid;
-    }
-    
-    /* 视频样式 - 关键：宽度100%，高度自适应，保持原始比例 */
-    .grid-item video {
-        height: auto;
-    }
+
 </style>
 </head>
 <body>
@@ -59,29 +54,29 @@
 
 
     <div class="gif-grid">
-      <div class="grid-item">
+     
       <video controls loop> <source src="hang_keychain.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="open_door.mp4" type="video/mp4"> </video>
-      </div>
+      
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> Charger grasp-insertion and Toy insertion</p>
 
 
     <div class="gif-grid">
-      <div class="grid-item">
+     
       <video controls loop> <source src="charger_process.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="toy.mp4" type="video/mp4"> </video>
-      </div>
+      
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (easy) and USB insertion (hard)</p>
 
     <div class="gif-grid">
-      <div class="grid-item">
+     
       <video controls loop> <source src="USB_easy.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB_hard.mp4" type="video/mp4"> </video>
-      </div>
+     
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) OOD case</p>
@@ -91,11 +86,11 @@
     </p>
 
     <div class="gif-grid_3columns">
-      <div class="grid-item">
+     
       <video controls loop> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB-hard-process2.mp4" type="video/mp4"> </video>
-      </div>
+      
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) and hanging keychain training</p>
@@ -105,14 +100,15 @@
     </p>
 
     <div class="gif-grid">
-      <div class="grid-item">
+     
       <video controls loop> <source src="USB_training.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="hang_training.mp4" type="video/mp4"> </video>
-      </div>
+     
     </div>
 
   </section>
 </body>
 </html>
+
 
 
