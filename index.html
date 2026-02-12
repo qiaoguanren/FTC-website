@@ -11,13 +11,20 @@
   <!-- model viewer -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
   <title>
-    TrafficGamer
+    FTC
   </title>
   <!-- <link rel="icon" href="car.jpg"> -->
   <style>
     .gif-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .gif-grid_3columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         max-width: 1000px;
         margin: 0 auto;
@@ -40,443 +47,52 @@
   <div class="container is-max-desktop has-text-centered">
 
   
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 Y-Junction Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario1/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario1/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario1/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario1/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario1/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario1/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario1/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario1/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario1/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-    </div>
-    </div>
+    <p class="title is-3 mt-5 has-text-centered"> Hanging keychain and Opening door</p>
 
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario1/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="hang_keychain.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="open_door.mp4" type="video/mp4"> </video>
     </div>
 
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 Dense Intersection Scenario</p>
+    <p class="title is-3 mt-5 has-text-centered"> Charger grasp-insertion and Toy insertion</p>
 
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario2/loose_constraint-low_risk/1_bev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario2/loose_constraint-medium_risk/1_bev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario2/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario2/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario2/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario2/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario2/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario2/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario2/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-        
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario2/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-    
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 Roundabout Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario3/loose_constraint-low_risk/1_bev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario3/loose_constraint-medium_risk/1_bev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario3/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario3/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario3/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario3/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario3/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario3/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario3/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-    </div>
+      <video muted autoplay loop> <source src="charger_process.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="toy.mp4" type="video/mp4"> </video>
     </div>
 
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
+    <p class="title is-3 mt-5 has-text-centered"> USB insertion (easy) and USB insertion (hard)</p>
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario3/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="USB_easy.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="USB_hard.mp4" type="video/mp4"> </video>
     </div>
 
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 Dual Intersection Scenario</p>
-    
+    <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) OOD case</p>
+
     <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
+      OOD means we only trained at 4 fixed positions, but it can still generalize to the eight positions.
     </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario4/loose_constraint-low_risk/1_bev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario4/loose_constraint-medium_risk/1_bev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario4/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario4/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario4/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario4/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario4/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario4/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario4/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-    </div>
+
+    <div class="gif-grid_3columns">
+      <video muted autoplay loop> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="USB-hard_process2.mp4" type="video/mp4"> </video>
     </div>
 
+    <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) and hanging keychain training</p>
+
     <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
+      We recorded the entire training process until final convergence. The USB training took about 45 minutes, and the hanging keychain task took about 20 minutes.
+    </p>
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario4/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="USB_training.mp4" type="video/mp4"> </video>
+      <video muted autoplay loop> <source src="hang_training.mp4" type="video/mp4"> </video>
     </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 T-Junction Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario5/loose_constraint-low_risk/1_bev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario5/loose_constraint-medium_risk/1_bev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario5/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario5/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario5/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario5/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario5/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario5/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario5/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario5/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Argoverse 2 Merge Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="av2_scenario/scenario6/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="av2_scenario/scenario6/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="av2_scenario/scenario6/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="av2_scenario/scenario6/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="av2_scenario/scenario6/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="av2_scenario/scenario6/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="av2_scenario/scenario6/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="av2_scenario/scenario6/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="av2_scenario/scenario6/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="av2_scenario/scenario6/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion Merge Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario1/loose_constraint-low_risk/1_bev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario1/loose_constraint-medium_risk/1_bev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario1/loose_constraint-high_risk/1_bev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario1/medium_constraint-low_risk/1_bev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario1/medium_constraint-medium_risk/1_bev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario1/medium_constraint-high_risk/1_bev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario1/tight_constraint-low_risk/1_bev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario1/tight_constraint-medium_risk/1_bev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario1/tight_constraint-high_risk/1_bev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario1/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion Dual Intersection Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario2/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario2/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario2/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario2/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario2/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario2/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario2/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario2/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario2/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario2/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion T-Junction Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario3/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario3/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario3/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario3/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario3/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario3/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario3/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario3/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario3/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-      </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario3/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion Dense Intersection Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario4/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario4/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario4/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario4/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario4/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario4/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario4/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario4/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario4/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario4/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion Roundabout Scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario5/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario5/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario5/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario5/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario5/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario5/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario5/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario5/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario5/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario5/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-    <p class="title is-3 mt-5 has-text-centered"> Waymo Motion Y-Junction scenario</p>
-    
-    <p class="content has-text-centered is-size-5">
-      2D Visualization (third-person perspective)
-    </p>
-    
-    <div class="level">
-      <div class="gif-grid">
-        <img src="waymo_pred/scenario6/loose_constraint-low_risk/1_dev.gif" alt="GIF 3">
-        <img src="waymo_pred/scenario6/loose_constraint-medium_risk/1_dev.gif" alt="GIF 2">
-        <img src="waymo_pred/scenario6/loose_constraint-high_risk/1_dev.gif" alt="GIF 1">
-        <img src="waymo_pred/scenario6/medium_constraint-low_risk/1_dev.gif" alt="GIF 6">
-        <img src="waymo_pred/scenario6/medium_constraint-medium_risk/1_dev.gif" alt="GIF 5">
-        <img src="waymo_pred/scenario6/medium_constraint-high_risk/1_dev.gif" alt="GIF 4">
-        <img src="waymo_pred/scenario6/tight_constraint-low_risk/1_dev.gif" alt="GIF 9">
-        <img src="waymo_pred/scenario6/tight_constraint-medium_risk/1_dev.gif" alt="GIF 8">
-        <img src="waymo_pred/scenario6/tight_constraint-high_risk/1_dev.gif" alt="GIF 7">
-    </div>
-    </div>
-
-    <p class="content has-text-centered is-size-5">
-      3D Visualization (first-person perspective)
-    </p> 
-
-    <div class="gif-grid">
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/loose_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/loose_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/loose_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/medium_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/medium_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/medium_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/tight_constraint-low_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/tight_constraint-medium_risk/1_interface.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="waymo_pred/scenario6/tight_constraint-high_risk/1_interface.mp4" type="video/mp4"> </video>
-    </div>
-
-  </div>
-
 
   </section>
 </body>
-
 </html>
