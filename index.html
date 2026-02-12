@@ -33,6 +33,21 @@
         width: 100%;
         height: auto;
     }
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9宽高比 */
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 或 contain */
+    }
 </style>
 </head>
 <body>
@@ -51,23 +66,29 @@
 
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="hang_keychain.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="open_door.mp4" type="video/mp4"> </video>
+      <div class="video-container">
+      <video controls loop> <source src="hang_keychain.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="open_door.mp4" type="video/mp4"> </video>
+      </div>
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> Charger grasp-insertion and Toy insertion</p>
 
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="charger_process.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="toy.mp4" type="video/mp4"> </video>
+      <div class="video-container">
+      <video controls loop> <source src="charger_process.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="toy.mp4" type="video/mp4"> </video>
+      </div>
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (easy) and USB insertion (hard)</p>
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="USB_easy.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="USB_hard.mp4" type="video/mp4"> </video>
+      <div class="video-container">
+      <video controls loop> <source src="USB_easy.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="USB_hard.mp4" type="video/mp4"> </video>
+      </div>
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) OOD case</p>
@@ -77,9 +98,11 @@
     </p>
 
     <div class="gif-grid_3columns">
-      <video muted autoplay loop> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="USB-hard_process2.mp4" type="video/mp4"> </video>
+      <div class="video-container">
+      <video controls loop> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="USB-hard-process2.mp4" type="video/mp4"> </video>
+      </div>
     </div>
 
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) and hanging keychain training</p>
@@ -89,8 +112,10 @@
     </p>
 
     <div class="gif-grid">
-      <video muted autoplay loop> <source src="USB_training.mp4" type="video/mp4"> </video>
-      <video muted autoplay loop> <source src="hang_training.mp4" type="video/mp4"> </video>
+      <div class="video-container">
+      <video controls loop> <source src="USB_training.mp4" type="video/mp4"> </video>
+      <video controls loop> <source src="hang_training.mp4" type="video/mp4"> </video>
+      </div>
     </div>
 
   </section>
