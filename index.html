@@ -33,20 +33,18 @@
         width: 100%;
         height: auto;
     }
-    .video-container {
-        position: relative;
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9宽高比 */
-        height: 0;
-        overflow: hidden;
     }
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
+    
+    /* 视频样式 - 关键：宽度100%，高度自适应，保持原始比例 */
+    .grid-item video {
         width: 100%;
-        height: 100%;
-        object-fit: cover; /* 或 contain */
+        height: auto;
+        display: block;
     }
 </style>
 </head>
@@ -66,7 +64,7 @@
 
 
     <div class="gif-grid">
-      <div class="video-container">
+      <div class="grid-item">
       <video controls loop> <source src="hang_keychain.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="open_door.mp4" type="video/mp4"> </video>
       </div>
@@ -76,7 +74,7 @@
 
 
     <div class="gif-grid">
-      <div class="video-container">
+      <div class="grid-item">
       <video controls loop> <source src="charger_process.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="toy.mp4" type="video/mp4"> </video>
       </div>
@@ -85,7 +83,7 @@
     <p class="title is-3 mt-5 has-text-centered"> USB insertion (easy) and USB insertion (hard)</p>
 
     <div class="gif-grid">
-      <div class="video-container">
+      <div class="grid-item">
       <video controls loop> <source src="USB_easy.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB_hard.mp4" type="video/mp4"> </video>
       </div>
@@ -98,7 +96,7 @@
     </p>
 
     <div class="gif-grid_3columns">
-      <div class="video-container">
+      <div class="grid-item">
       <video controls loop> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="USB-hard-process2.mp4" type="video/mp4"> </video>
@@ -112,7 +110,7 @@
     </p>
 
     <div class="gif-grid">
-      <div class="video-container">
+      <div class="grid-item">
       <video controls loop> <source src="USB_training.mp4" type="video/mp4"> </video>
       <video controls loop> <source src="hang_training.mp4" type="video/mp4"> </video>
       </div>
