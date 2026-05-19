@@ -1,106 +1,212 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- bulma css template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <!-- ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <!-- model viewer -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-  <title>
-    FTC
-  </title>
-  <!-- <link rel="icon" href="car.jpg"> -->
-  <style>
-    .gif-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 1000px;
-        margin: 0 auto;
-        height: auto;
-    }
-    .gif-grid img {
-        width: 100%;
-        height: auto;
-    }
-
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Focus-Then-Contact: a lightweight real-world reinforcement learning framework for contact-rich robotic manipulation." />
+  <title>Focus-Then-Contact | Real-World RL for Contact-Rich Manipulation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <section class="section">
-
-  <div class="container has-text-centered">
-    <!-- paper title -->
-    <p class="title is-3"> Focus-Then-Contact: Speeding Up Robotic Contact-Rich Task Learning with Affordance-Guided Real-World Residual Reinforcement Learning
- </p>
-
-  <!-- main container -->
-  <div class="container is-max-desktop has-text-centered">
-
-  
-    <p class="title is-3 mt-5 has-text-centered"> Hanging keychain and Opening door</p>
-
-
-    <div class="gif-grid">
-     
-      <video controls> <source src="hang_keychain.mp4" type="video/mp4"> </video>
-      <video controls> <source src="open_door.mp4" type="video/mp4"> </video>
-      
+  <nav class="nav">
+    <a class="brand" href="#top"><span class="brand-mark"></span>FTC</a>
+    <div class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#demos">Demos</a>
+      <a href="#training">Training</a>
+      <a href="#robustness">Robustness</a>
     </div>
+  </nav>
 
-    <p class="title is-3 mt-5 has-text-centered"> Charger grasp-insertion and Toy insertion</p>
-
-
-    <div class="gif-grid">
-     
-      <video controls> <source src="charger_process.mp4" type="video/mp4"> </video>
-      <video controls > <source src="toy.mp4" type="video/mp4"> </video>
-      
+  <header id="top" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/socket.jpg">
+      <source src="assets/video/hero_background.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Real-World Reinforcement Learning · Contact-Rich Manipulation</p>
+      <h1>Focus-Then-Contact</h1>
+      <h2>Speeding Up Robotic Contact-Rich Task Learning with Affordance-Guided Real-World Residual Reinforcement Learning</h2>
+      <p class="hero-copy">FTC first focuses the robot on key contact regions, then learns precise force-aware interaction through human-in-the-loop residual reinforcement learning.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#demos">Watch demos</a>
+        <a class="btn ghost" href="https://github.com/qiaoguanren/FTC-website" target="_blank" rel="noopener">GitHub videos</a>
+        <a class="btn ghost" href="#method">Method overview</a>
+      </div>
+      <div class="hero-stats" aria-label="project highlights">
+        <div><strong>6</strong><span>real-world tasks</span></div>
+        <div><strong>2×</strong><span>wrist cameras</span></div>
+        <div><strong>HIL</strong><span>real-world RL</span></div>
+        <div><strong>OOD</strong><span>pose & visual tests</span></div>
+      </div>
     </div>
+    <a class="scroll" href="#overview">▼ Scroll down</a>
+  </header>
 
-    <p class="title is-3 mt-5 has-text-centered"> USB insertion (easy) and USB insertion (hard)</p>
+  <main>
+    <section id="overview" class="section intro-section">
+      <div class="section-head">
+        <p class="eyebrow dark">Overview</p>
+        <h2>A lightweight path from coarse focus to precise contact.</h2>
+        <p>Real-world RL can master contact-rich manipulation, but physical interaction is expensive and sparse rewards make exploration inefficient. FTC reduces meaningless trial-and-error by combining an IL base policy, residual RL, keyframe-based affordance guidance, and human intervention designed for cluttered scenes.</p>
+      </div>
+      <div class="overview-grid">
+        <article class="feature-card">
+          <span>01</span>
+          <h3>Base action from residual RL</h3>
+          <p>A frozen imitation-learning policy provides a stable action prior, while a lightweight residual policy learns real-time corrections.</p>
+        </article>
+        <article class="feature-card">
+          <span>02</span>
+          <h3>Keyframe-based affordance reward</h3>
+          <p>Goal keyframes from demonstrations provide dense visual guidance, helping the robot focus on regions that matter for task completion.</p>
+        </article>
+        <article class="feature-card">
+          <span>03</span>
+          <h3>Human-in-the-loop contact refinement</h3>
+          <p>Expert interventions are integrated through a timed intervention window to avoid conflict with RL while preserving safety.</p>
+        </article>
+      </div>
+      <figure class="wide-figure glass">
+        <img src="assets/img/flowchart.png" alt="Focus-Then-Contact framework overview" />
+        <figcaption>FTC framework: focus on goal regions through affordance-guided reward, then refine contact behavior with real-world residual RL and optional human intervention.</figcaption>
+      </figure>
+    </section>
 
-    <div class="gif-grid">
-     
-      <video controls> <source src="USB_easy.mp4" type="video/mp4"> </video>
-      <video controls> <source src="USB_hard.mp4" type="video/mp4"> </video>
-     
-    </div>
+    <section id="method" class="section dark-section">
+      <div class="section-head light">
+        <p class="eyebrow">Method Overview</p>
+        <h2>Three modules that make real-world interaction more sample-efficient.</h2>
+      </div>
+      <div class="method-layout">
+        <div class="method-copy">
+          <div class="step active">
+            <b>Focus</b>
+            <h3>Keyframe affordance guidance</h3>
+            <p>Encode the current wrist-camera observation and the goal keyframe, then shape dense rewards using their embedding distance.</p>
+          </div>
+          <div class="step">
+            <b>Residual</b>
+            <h3>Base policy + learned correction</h3>
+            <p>The action is formed by combining a base policy action with a residual policy trained online using SAC-style optimization.</p>
+          </div>
+          <div class="step">
+            <b>Contact</b>
+            <h3>HIL real-world RL</h3>
+            <p>Dual wrist cameras and force feedback support fine-grained contact-rich control under pose variation and clutter.</p>
+          </div>
+        </div>
+        <div class="method-figures">
+          <img src="assets/img/keyframe.png" alt="Keyframe-based affordance guidance" />
+          <img src="assets/img/reward_model.png" alt="Reward model architecture" />
+        </div>
+      </div>
+    </section>
 
-    <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) OOD case</p>
+    <section id="demos" class="section">
+      <div class="section-head">
+        <p class="eyebrow dark">Real-World Demos</p>
+        <h2>Contact-rich atomic skills learned on real robots.</h2>
+        <p>All videos below are click-to-play demos from the FTC video repository. The layout follows the WholeBodyVLA-style project page pattern: large title, concise captions, and grid-based demonstrations.</p>
+      </div>
 
-    <p class="content has-text-centered is-size-5">
-      OOD means we only trained at 4 fixed positions, but it can still generalize to the eight positions.
-    </p>
+      <div class="video-group">
+        <h3>Hanging keychain and opening door</h3>
+        <div class="video-grid two">
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/hang_keychain.mp4" type="video/mp4"></video><p>Hanging keychain</p></article>
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/open_door.mp4" type="video/mp4"></video><p>Opening door</p></article>
+        </div>
+      </div>
 
-    <div class="gif-grid">
-     
-      <video controls> <source src="USB_OOD1.mp4" type="video/mp4"> </video>
-      <video controls> <source src="USB_OOD2.mp4" type="video/mp4"> </video>
-      
-    </div>
+      <div class="video-group">
+        <h3>Charger grasp-insertion and toy insertion</h3>
+        <div class="video-grid two">
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/charger_process.mp4" type="video/mp4"></video><p>Charger grasp-insertion</p></article>
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/toy.mp4" type="video/mp4"></video><p>Toy insertion</p></article>
+        </div>
+      </div>
 
-    <p class="title is-3 mt-5 has-text-centered"> USB insertion (hard) and hanging keychain training</p>
+      <div class="video-group">
+        <h3>USB insertion</h3>
+        <div class="video-grid two">
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/USB_easy.mp4" type="video/mp4"></video><p>USB insertion: easy</p></article>
+          <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/USB_hard.mp4" type="video/mp4"></video><p>USB insertion: hard</p></article>
+        </div>
+      </div>
+    </section>
 
-    <p class="content has-text-centered is-size-5">
-      We recorded the entire training process until final convergence. The USB training took about 45 minutes, and the hanging keychain task took about 20 minutes.
-    </p>
+    <section id="training" class="section split-section">
+      <div class="split-copy">
+        <p class="eyebrow dark">Training Process</p>
+        <h2>Fast convergence with visible real-world improvement.</h2>
+        <p>The original FTC demo page records complete training processes: USB hard insertion converges in about 45 minutes, while keychain hanging takes about 20 minutes.</p>
+      </div>
+      <div class="video-grid two compact">
+        <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/USB_training.mp4" type="video/mp4"></video><p>USB hard training</p></article>
+        <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/hang_training.mp4" type="video/mp4"></video><p>Keychain training</p></article>
+      </div>
+    </section>
 
-    <div class="gif-grid">
-     
-      <video controls> <source src="USB_training.mp4" type="video/mp4"> </video>
-      <video controls> <source src="hang_training.mp4" type="video/mp4"> </video>
-     
-    </div>
-  </div>
-  </div>
+    <section id="robustness" class="section dark-section">
+      <div class="section-head light">
+        <p class="eyebrow">Robustness & OOD Generalization</p>
+        <h2>From fixed training positions to unseen execution poses.</h2>
+        <p>FTC evaluates pose changes, visual disturbances, and out-of-distribution positions. The USB OOD case shows generalization from four trained positions to eight test positions.</p>
+      </div>
+      <div class="video-grid two">
+        <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/USB_OOD1.mp4" type="video/mp4"></video><p>USB OOD case 1</p></article>
+        <article class="video-card"><video controls preload="metadata"><source src="https://cdn.jsdelivr.net/gh/qiaoguanren/FTC-website@main/USB_OOD2.mp4" type="video/mp4"></video><p>USB OOD case 2</p></article>
+      </div>
+      <div class="robust-grid">
+        <figure><img src="assets/img/ambient.jpg" alt="ambient disturbance setting"><figcaption>Ambient / workspace variation</figcaption></figure>
+        <figure><img src="assets/img/in_scene.jpg" alt="in-scene variation"><figcaption>In-scene visual variation</figcaption></figure>
+        <figure><img src="assets/img/lighting.jpg" alt="lighting variation"><figcaption>Lighting disturbance</figcaption></figure>
+      </div>
+    </section>
 
-  </section>
+    <section class="section results-section">
+      <div class="section-head">
+        <p class="eyebrow dark">Learning Curves</p>
+        <h2>Quantitative snapshots from the manuscript.</h2>
+      </div>
+      <div class="curve-grid">
+        <figure><img src="assets/img/USB_count.png" alt="USB training count curve"><figcaption>USB insertion</figcaption></figure>
+        <figure><img src="assets/img/charger_count.png" alt="Charger training count curve"><figcaption>Charger insertion</figcaption></figure>
+        <figure><img src="assets/img/hanging_count.png" alt="Hanging training count curve"><figcaption>Keychain hanging</figcaption></figure>
+        <figure><img src="assets/img/cart_count.png" alt="Cart training count curve"><figcaption>Card / cart task</figcaption></figure>
+      </div>
+      <div class="dense-grid">
+        <figure><img src="assets/img/dense_reward_example1.png" alt="Dense reward example 1"><figcaption>Dense reward example 1</figcaption></figure>
+        <figure><img src="assets/img/dense_reward_example2.png" alt="Dense reward example 2"><figcaption>Dense reward example 2</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section task-gallery">
+      <div class="section-head">
+        <p class="eyebrow dark">Task Gallery</p>
+        <h2>Dual wrist-camera observations across manipulation skills.</h2>
+      </div>
+      <div class="wrist-grid">
+        <img src="assets/img/charger_wrist1.jpg" alt="charger wrist view 1"><img src="assets/img/charger_wrist2.jpg" alt="charger wrist view 2">
+        <img src="assets/img/usb_wrist1.jpg" alt="usb wrist view 1"><img src="assets/img/usb_wrist2.jpg" alt="usb wrist view 2">
+        <img src="assets/img/hang_wrist1.jpg" alt="hanging wrist view 1"><img src="assets/img/hang_wrist2.jpg" alt="hanging wrist view 2">
+        <img src="assets/img/door_wrist1.jpg" alt="door wrist view 1"><img src="assets/img/door_wrist2.jpg" alt="door wrist view 2">
+        <img src="assets/img/toy_wrist1.jpg" alt="toy wrist view 1"><img src="assets/img/toy_wrist2.jpg" alt="toy wrist view 2">
+        <img src="assets/img/usb_wrist1_pos2.jpg" alt="usb ood wrist view"><img src="assets/img/usb_wrist2_pos4.jpg" alt="usb ood wrist view">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>Focus-Then-Contact</h2>
+    <p>Project page generated from the uploaded manuscript assets and FTC demo videos. Replace <code>assets/video/hero_background.mp4</code> with your own background video for the opening scene.</p>
+    <p class="fineprint">© 2026 FTC Research. Static HTML/CSS page.</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
-
-
