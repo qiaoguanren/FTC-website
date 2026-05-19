@@ -12,7 +12,7 @@
 
   <style>
     /* Compact project-page overrides */
-    .hero{min-height:88vh;}
+        .hero{min-height:88vh;}
     .hero-content{width:min(1080px,calc(100% - 36px));padding-top:72px;text-align:center;margin:auto;}
     .hero h1{font-size:clamp(34px,4.6vw,58px);line-height:1.08;margin:8px auto 8px;letter-spacing:-.035em;font-weight:650;max-width:1040px;}
     .hero h2{font-size:clamp(17px,2.05vw,26px);line-height:1.28;margin:0 auto;max-width:980px;letter-spacing:-.015em;font-weight:500;color:rgba(255,255,255,.9);}
@@ -51,6 +51,17 @@
     .citation-box{max-width:920px;margin:22px auto 0;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:16px 18px;overflow:auto;}
     .citation-box h3{margin:0 0 8px;font-size:18px;color:#fff;}
     .citation-box pre{margin:0;white-space:pre-wrap;color:#c7f9ff;font-size:13px;line-height:1.55;}
+
+    .teaser-section{padding-top:42px;padding-bottom:26px;background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);}
+    .teaser-wrap{max-width:1040px;margin:0 auto;}
+    .teaser-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:12px;box-shadow:0 18px 60px rgba(15,23,42,.12);}
+    .teaser-card video{display:block;width:100%;border-radius:20px;background:#000;aspect-ratio:16/9;object-fit:cover;}
+    .teaser-caption{margin:10px 4px 0;text-align:center;color:var(--muted);font-size:15px;line-height:1.55;}
+    .video-grid.usb-portrait-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;}
+    .video-card.usb-portrait{max-width:245px;margin:0 auto;width:100%;}
+    .video-card.usb-portrait video{aspect-ratio:9/16;height:auto;object-fit:cover;background:#000;}
+    @media (max-width:1100px){.video-grid.usb-portrait-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.video-card.usb-portrait{max-width:300px;}}
+    @media (max-width:620px){.video-grid.usb-portrait-grid{grid-template-columns:1fr;}.video-card.usb-portrait{max-width:280px;}}
     @media (max-width:900px){.affiliation-card.cuhk{min-width:0;width:100%;height:auto;}.affiliation-card.dex{min-width:160px;}.affiliation-card img{max-width:100%;max-height:50px;}.hero-stats{grid-template-columns:repeat(2,1fr);}}
     @media (max-width:560px){.hero h1{font-size:38px;}.hero h2{font-size:18px;}.paper-authors{font-size:14px;}.section{padding:44px 16px;}.abstract-card{padding:22px 18px;}.hero-stats{grid-template-columns:1fr;}}
   </style>
@@ -69,9 +80,6 @@
   </nav>
 
   <header id="top" class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/video/teaser.mp4" type="video/mp4" />
-    </video>
     <div class="hero-scrim"></div>
     <div class="hero-content">
       <p class="eyebrow">Real-World Reinforcement Learning · Contact-Rich Manipulation</p>
@@ -95,6 +103,19 @@
   </header>
 
   <main>
+    <section class="section teaser-section">
+      <div class="section-head">
+        <p class="eyebrow dark">Welcome to FTC</p>
+      </div>
+      <div class="teaser-wrap">
+        <div class="teaser-card">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/teaser.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+    
     <section id="overview" class="section">
       <div class="abstract-card">
         <h2>Abstract</h2>
@@ -156,9 +177,9 @@
 
       <div class="video-group">
         <h3>USB insertion</h3>
-        <div class="video-grid two">
-          <article class="video-card"><video controls preload="metadata"><source src="assets/video/USB_easy.mp4" type="video/mp4"></video><p>USB insertion: easy</p></article>
-          <article class="video-card"><video controls preload="metadata"><source src="assets/video/USB_hard.mp4" type="video/mp4"></video><p>USB insertion: hard</p></article>
+        <div class="video-grid usb-portrait-grid">
+          <article class="video-card usb-portrait"><video controls preload="metadata"><source src="assets/video/USB_easy.mp4" type="video/mp4"></video><p>USB insertion: easy</p></article>
+          <article class="video-card usb-portrait"><video controls preload="metadata"><source src="assets/video/USB_hard.mp4" type="video/mp4"></video><p>USB insertion: hard</p></article>
         </div>
       </div>
     </section>
@@ -181,9 +202,9 @@
         <h2>From fixed training positions to unseen execution poses.</h2>
         <p> The USB OOD case shows generalization from four trained positions to eight test positions.</p>
       </div>
-      <div class="video-grid two">
-        <article class="video-card"><video controls preload="metadata"><source src="assets/video/USB_OOD1.mp4" type="video/mp4"></video><p>USB OOD case 1</p></article>
-        <article class="video-card"><video controls preload="metadata"><source src="assets/video/USB_OOD2.mp4" type="video/mp4"></video><p>USB OOD case 2</p></article>
+      <div class="video-grid usb-portrait-grid">
+        <article class="video-card usb-portrait"><video controls preload="metadata"><source src="assets/video/USB_OOD1.mp4" type="video/mp4"></video><p>USB OOD case 1</p></article>
+        <article class="video-card usb-portrait"><video controls preload="metadata"><source src="assets/video/USB_OOD2.mp4" type="video/mp4"></video><p>USB OOD case 2</p></article>
       </div>
     </section>
   </main>
